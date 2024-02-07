@@ -16,7 +16,7 @@ const Homepage = () => {
             <div className="container mt-5 min-width-350">
                 <div className="row">
                     <div className="col-lg-6 px-4"><Weather /></div>
-                    <div className="col-lg-6 px-4">
+                    <div className="col-lg-6 px-4 py-4">
                         <Router>
                             <div className='dfjeac'>
                                 {!token && <Link to='/login'><button className='btn btn-dark'>Login</button></Link>}
