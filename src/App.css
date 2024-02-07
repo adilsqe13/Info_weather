@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+.font-style{
+    font-family: 'Sixtyfour', sans-serif;
+}
+a{
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dfjcac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dfjeac{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.dfjeae{
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+.dfjcae{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.dfjsac{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cursor-pointer{
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bold{
+    font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.margin-auto{
+    margin: auto;
+}
+.min-width-350{
+    min-width: 350px;
+}
+.float-end{
+    float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 800px){
+    .dna800{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    .dna400{
+        display: none;
+    }
+}
+@media screen and (max-width: 1277px){
+    .dna1277{
+        display: none;
+    }
+}
+@media screen and (max-width: 1277px){
+    .mqat990{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pyat990{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
