@@ -108,7 +108,7 @@ const UsersTable = () => {
                 <input className="form-control me-2 border border-secondary" type="search" placeholder="Filter by email, username, Active, Inactive" aria-label="Search" value={filter} onChange={(e)=> setFilter(e.target.value)} />
                 <button onClick={handleFilter} className="btn btn-dark" type="submit">Search</button>
             </div>
-                <table className="table mt-4 table-success table-striped">
+                <table className="table mt-4 py-3 table-success table-striped">
                     <thead>
                         <tr>
                             <th scope="col">SL no.</th>

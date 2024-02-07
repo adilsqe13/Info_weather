@@ -51,6 +51,12 @@ a{
     float: right;
 }
 
+.psa0{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
 @media screen and (max-width: 800px){
     .dna800{
         display: none;

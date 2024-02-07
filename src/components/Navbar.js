@@ -13,7 +13,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-info">
+            <nav className="navbar navbar-expand-lg bg-info psa0">
                 <div className="container-fluid">
                     <a className="navbar-brand text-light font-style fs-3" href="/">Inf<FontAwesomeIcon style={{color:'black'}} icon={faGlobe} />weather</a>
                     <button className="navbar-toggler fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -47,6 +47,7 @@ export default function () {
     }
     return (
         <>
+        <div className='container-fluid py-4'>
             <h1 className='mt-3'>Signup</h1>
             <div className='mt-4'>
                 <div className="mb-3">
@@ -69,6 +70,7 @@ export default function () {
                 <button disabled={isProcessing} onClick={()=>handleSignup()} type="submit" className="btn btn-dark mt-2 w-25 fs-5">
                 {isProcessing? <BlackSpinner height={21} width={21} /> : 'Next'}
                     </button>
+            </div>
             </div>
         </>
     )

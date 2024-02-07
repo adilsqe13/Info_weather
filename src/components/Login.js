@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
-import {BlackSpinner} from '../Spinner';
+import { BlackSpinner } from '../Spinner';
 import toastContext from '../CONTEXT/context/toastContext';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
-    const { showToast } =useContext(toastContext);
+    const { showToast } = useContext(toastContext);
 
 
     const handleLogin = async () => {
@@ -17,7 +17,7 @@ const Login = () => {
             .then((userCredential) => {
                 const authToken = userCredential.user.accessToken;
                 localStorage.setItem('authToken', authToken);
-                localStorage.setItem('email',userCredential.user.email );
+                localStorage.setItem('email', userCredential.user.email);
                 window.location.reload();
             })
             .catch((error) => {
@@ -28,7 +28,8 @@ const Login = () => {
     };
 
     return (
-        <>
+        <> 
+        <div className='container-fluid py-4'>
             <h1 className='mt-3'>Login</h1>
             <div className='mt-4'>
                 <div className="mb-3">
@@ -41,9 +42,10 @@ const Login = () => {
                     <input type="password" className="form-control border-secondary" id="exampleInputPassword1" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter password' />
                 </div>
                 <button disabled={isProcessing} onClick={handleLogin} type="submit" className="btn w-25 fs-5 btn-dark mt-2">
-                   {isProcessing? <BlackSpinner height={21} width={21} /> : 'Next'}
-                    </button>
+                    {isProcessing ? <BlackSpinner height={21} width={21} /> : 'Next'}
+                </button>
             </div>
+        </div>
         </>
     );
 };
