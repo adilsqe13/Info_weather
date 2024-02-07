@@ -1,0 +1,55 @@
+[debug] [2024-02-07T11:56:29.897Z] ----------------------------------------------------------------------
+[debug] [2024-02-07T11:56:29.914Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Adil Alam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-02-07T11:56:29.914Z] CLI Version:   13.0.3
+[debug] [2024-02-07T11:56:29.915Z] Platform:      win32
+[debug] [2024-02-07T11:56:29.915Z] Node Version:  v20.11.0
+[debug] [2024-02-07T11:56:29.916Z] Time:          Wed Feb 07 2024 17:26:29 GMT+0530 (India Standard Time)
+[debug] [2024-02-07T11:56:29.916Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-07T11:56:30.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-07T11:56:30.081Z] > authorizing via signed-in user (mrindia1075@gmail.com)
+[debug] [2024-02-07T11:56:30.082Z] [iam] checking project infoweather-d888a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-07T11:56:30.087Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/infoweather-d888a:testIamPermissions [none]
+[debug] [2024-02-07T11:56:30.088Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/infoweather-d888a:testIamPermissions x-goog-quota-user=projects/infoweather-d888a
+[debug] [2024-02-07T11:56:30.088Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/infoweather-d888a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-07T11:56:32.541Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/infoweather-d888a:testIamPermissions 200
+[debug] [2024-02-07T11:56:32.542Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/infoweather-d888a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-07T11:56:32.544Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/infoweather-d888a [none]
+[debug] [2024-02-07T11:56:33.327Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/infoweather-d888a 200
+[debug] [2024-02-07T11:56:33.328Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/infoweather-d888a {"projectId":"infoweather-d888a","projectNumber":"252158383544","displayName":"InfoWeather","name":"projects/infoweather-d888a","resources":{"hostingSite":"infoweather-d888a"},"state":"ACTIVE","etag":"1_5497b334-37fd-4300-aaad-34f44e976b84"}
+[info] 
+[info] === Deploying to 'infoweather-d888a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-02-07T11:56:33.345Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/infoweather-d888a/versions [none]
+[debug] [2024-02-07T11:56:33.345Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/infoweather-d888a/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-02-07T11:56:35.015Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/infoweather-d888a/versions 200
+[debug] [2024-02-07T11:56:35.015Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/infoweather-d888a/versions {"name":"projects/252158383544/sites/infoweather-d888a/versions/69172c112aeef201","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[infoweather-d888a]: beginning deploy... 
+[info] i  hosting[infoweather-d888a]: found 14 files in build 
+[debug] [2024-02-07T11:56:35.038Z] [hosting] uploading with 200 concurrency
+[debug] [2024-02-07T11:56:35.505Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2024-02-07T11:56:35.506Z] [hosting][hash queue][FINAL] {"max":452,"min":5,"avg":52.5,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":462}
+[debug] [2024-02-07T11:56:35.507Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/252158383544/sites/infoweather-d888a/versions/69172c112aeef201:populateFiles [none]
+[debug] [2024-02-07T11:56:35.507Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/252158383544/sites/infoweather-d888a/versions/69172c112aeef201:populateFiles {"files":{"/favicon.ico":"27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d","/manifest.json":"ee04fb47e525c67d8424ffe9b4d8a8a24e434504478afca4e0ca602146836d4c","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69","/index.html":"488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e","/static/js/592.cd44ca7e.chunk.js":"afbd1ccaa59cb97d4db54e68026ce777578aed21d0cfe2b52ee631a040e8d0e4","/static/js/592.cd44ca7e.chunk.js.map":"af41daae766a6bee4b3fd372686e6fee328907519660aa5173ee83d741aaecc5","/static/css/main.c74dc2c4.css":"4407138eb521bddefbfb1a095da22016c63964b150226f08e6de2e3affd1383d","/static/js/main.48f576bd.js.LICENSE.txt":"0d9df4c0c4d6a70297138fabfcd9c219d225b469455dd98cc647fd0e0765b985","/static/css/main.c74dc2c4.css.map":"e916567a324a3c5552b1eaf5b23dadd918660ecf037191d169e1d224d8097342","/static/media/spinner.7c0d76c796293e935ccb.gif":"1a707ccbca2645a572e3cf03715a3d65dd3aeae454c5dcba3d20e435722c58ec","/static/media/blackSpinner.e59236279ae16a231c89.gif":"0155d36bc26f92fc4f77975837b57466dfd9ec82b262928741bf89c58d2ac7a9","/static/js/main.48f576bd.js":"f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f","/static/js/main.48f576bd.js.map":"dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89"}}
+[debug] [2024-02-07T11:56:36.084Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/252158383544/sites/infoweather-d888a/versions/69172c112aeef201:populateFiles 200
+[debug] [2024-02-07T11:56:36.084Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/252158383544/sites/infoweather-d888a/versions/69172c112aeef201:populateFiles {"uploadRequiredHashes":["dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89","488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e","f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f","6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files"}
+[debug] [2024-02-07T11:56:36.088Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89 [none]
+[debug] [2024-02-07T11:56:36.088Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89 [stream]
+[debug] [2024-02-07T11:56:36.092Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e [none]
+[debug] [2024-02-07T11:56:36.092Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e [stream]
+[debug] [2024-02-07T11:56:36.096Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f [none]
+[debug] [2024-02-07T11:56:36.096Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f [stream]
+[debug] [2024-02-07T11:56:36.099Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69 [none]
+[debug] [2024-02-07T11:56:36.099Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69 [stream]
+[debug] [2024-02-07T11:56:36.103Z] [hosting][populate queue][FINAL] {"max":585,"min":585,"avg":585,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":600}
+[debug] [2024-02-07T11:56:36.103Z] [hosting] uploads queued: 4
+[debug] [2024-02-07T11:56:39.563Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e 200
+[debug] [2024-02-07T11:56:39.564Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/488ea12c259d6641ddfd2d136c9d618dcdd5da157ec64928c199a520c54ae83e [stream]
+[debug] [2024-02-07T11:56:40.641Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69 200
+[debug] [2024-02-07T11:56:40.641Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/6b216822d0b4ee9ad653cfc4f847ff9b04ef09467c985fa9eebcef47d5cbbc69 [stream]
+[debug] [2024-02-07T11:56:55.083Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f 200
+[debug] [2024-02-07T11:56:55.083Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/f237f88e2959115a0c0457e130ed80317a1eafcd67f2209f40dc7fa55b1e122f [stream]
+[debug] [2024-02-07T11:57:38.410Z] [uploadQueue] Retrying task dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89
+[debug] [2024-02-07T11:57:38.412Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89 [none]
+[debug] [2024-02-07T11:57:38.412Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/infoweather-d888a/versions/69172c112aeef201/files/dbbc9592cee24a2b73406d3f54ef2d5ef7845bd28357ca7397c4db3d02daba89 [stream]
