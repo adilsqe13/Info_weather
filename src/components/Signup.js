@@ -47,7 +47,7 @@ export default function () {
     }
     return (
         <>
-        <div className='container-fluid py-4'>
+        <div className='container-fluid py-1'>
             <h1 className='mt-3'>Signup</h1>
             <div className='mt-4'>
                 <div className="mb-3">
